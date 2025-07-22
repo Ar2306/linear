@@ -44,3 +44,4 @@ for i in range(sample_images):
     plt.subplot(1, 5, i+1)
     plt.tile(f'actual label:{y_test[i]} \n predicted label:{results[i]}')
     plt.imshow(sample_images[i])
+    
