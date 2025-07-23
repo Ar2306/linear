@@ -1,0 +1,51 @@
+Record week 3:
+
+experiment 1:
+
+No of layers :2
+
+No of neuron in layer 1:128
+Activation fun in l1: relu
+
+No of neuron in layer 2(output):10
+Activation : softmax
+
+Optimiser : Adam
+Loss : categorical_crossentropy
+metrics : accuracy
+
+
+Epochs: 10
+Batch_size: 64
+
+experiment 2:
+
+hyperparameter:
+Optimiser : sgd
+accuracy: 0.0994 
+loss: 2.3026
+
+
+experiment 3:
+
+hyperparameter:
+Optimiser : sgd
+accuracy: 0.0994 
+loss: 2.3026
+
+
+experiment 4:
+
+hyperparameter:
+Optimiser : sgd
+accuracy: 0.0994 
+loss: 2.3026
+
+
+experiment 5:
+
+hyperparameter:
+Epochs increased from 10 to 30
+Optimiser : adam
+accuracy: 0.0994 
+loss: 2.3026

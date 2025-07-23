@@ -15,23 +15,20 @@ y_test = to_categorical(y_test)
 #architecture 
 model = Sequential()
 model.add(Flatten(input_shape=(32, 32, 3)))
+model.add(Dense(256, activation='relu'))
 model.add(Dense(128, activation='relu'))
 model.add(Dense(10, activation='softmax'))
 
 # Compile the model
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
 # Train the model
-model.fit(X_train, y_train, epochs=10, batch_size=64)
+history= model.fit(X_train, y_train, epochs=10, batch_size=64,validation_split=0.2)
+
 # Evaluate the model
-model.evaluate(X_test, y_test)
-# Predict
-sample_images = X_test[:5]
-sample_labels = y_test[:5]
-predictions = model.predict(sample_images)
-results = predictions.argmax(axis=1)
-for i in range(5):
-    plt.subplot(1, 5, i + 1)
-    plt.title(f'Actual: {sample_labels[i].argmax()} \n Predicted: {results[i]}')
-    plt.imshow(sample_images[i])
-    plt.axis('off')
+model.evaluate(X_train, y_train)
+
+
+#visualize 
+plt.plot(history.history['val_accuracy'],)
 plt.show()
