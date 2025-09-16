@@ -3,3 +3,4 @@ bin
 data
 hymenoptera_data
 __pycache__
+data/cifar-10-python.tar.gz
