@@ -1,7 +1,10 @@
-Lib
-bin
-data
-hymenoptera_data
-__pycache__
-/Users/anand/programming/b06/data
-/Users/anand/programming/b06/hymenoptera_data
+# Ignore dataset folders
+data/
+hymenoptera_data/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore venv
+venv/
